@@ -16,7 +16,7 @@
 - MySQL: Base de datos relacional para almacenar la información de los usuarios, productos, transacciones y otras entidades clave del sistema.
 - ORM de Django: Utilización del ORM (Object Relational Mapping) de Django para interactuar con la base de datos de manera eficiente y segura.
 
-####4. Gestión de Dependencias:
+#### 4. Gestión de Dependencias:
 
 - npm: Utilizado para la gestión de dependencias del frontend (React y bibliotecas relacionadas).
 - pip: Para la gestión de dependencias del backend (Django, Django REST Framework, MySQL Connector, etc.).
@@ -24,7 +24,7 @@
 
 - PythonAnywhere/Heroku/Vercel (o el servicio que elijas): Configuración del entorno de despliegue para el backend de Django y la base de datos.
 
-####6. Control de versiones:
+#### 6. Control de versiones:
 
 - Git y GitHub: Utilizados para la gestión del código fuente. El proyecto sigue el flujo de trabajo basado en ramas (feature, develop, main) y pull requests para integrar nuevas funcionalidades.
 
