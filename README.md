@@ -1,4 +1,3 @@
-# Compra-y-Venta-de-Materiales-de-Construccion
 ### Caracteristicas tecnicas del proyecto
 #### 1. Frontend:
 
