@@ -7,9 +7,7 @@
 
 #### 2. Backend:
 
-- Django (Python): Utilizado para la gestión del backend y API REST, asegurando una integración segura y escalable con el frontend.
-- Django REST Framework: Implementación de las API REST para manejar las operaciones CRUD entre el frontend y el backend.
-- Autenticación: Uso de JWT (JSON Web Tokens) y OAuth2 para la autenticación segura de los usuarios con proveedores externos (Google, Facebook, GitHub).
+- PostgreSQL: Es un sistema de gestión de bases de datos relacional de código abierto, conocido por su robustez y su capacidad para manejar grandes volúmenes de datos. Ofrece una amplia variedad de características avanzadas, como transacciones ACID, soporte para consultas complejas y extensibilidad a través de funciones definidas por el usuario. 
 
 #### 3. Base de Datos:
 
