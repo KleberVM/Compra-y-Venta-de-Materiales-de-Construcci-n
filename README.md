@@ -7,12 +7,13 @@
 
 #### 2. Backend:
 
-- PostgreSQL: Es un sistema de gestión de bases de datos relacional de código abierto, conocido por su robustez y su capacidad para manejar grandes volúmenes de datos. Ofrece una amplia variedad de características avanzadas, como transacciones ACID, soporte para consultas complejas y extensibilidad a través de funciones definidas por el usuario. 
+- Django (Python): Utilizado para la gestión del backend y API REST, asegurando una integración segura y escalable con el frontend.
+- Django REST Framework: Implementación de las API REST para manejar las operaciones CRUD entre el frontend y el backend.
+- Autenticación: Uso de JWT (JSON Web Tokens) y OAuth2 para la autenticación segura de los usuarios con proveedores externos (Google, Facebook, GitHub).
 
 #### 3. Base de Datos:
 
-- MySQL: Base de datos relacional para almacenar la información de los usuarios, productos, transacciones y otras entidades clave del sistema.
-- ORM de Django: Utilización del ORM (Object Relational Mapping) de Django para interactuar con la base de datos de manera eficiente y segura.
+- PostgreSQL: Es un sistema de gestión de bases de datos relacional de código abierto, conocido por su robustez y su capacidad para manejar grandes volúmenes de datos. Ofrece una amplia variedad de características avanzadas, como transacciones ACID, soporte para consultas complejas y extensibilidad a través de funciones definidas por el usuario. 
 
 #### 4. Gestión de Dependencias:
 
