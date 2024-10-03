@@ -1,0 +1,313 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    
+    flex-direction: column;
+    min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos la altura de la viewport */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02735E;
+    color: #fff;
+    padding: 2px;
+    z-index: 10;
+}
+
+.header-image {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+.menu-icon {
+    display: none; /* Oculta el icono del menú hamburguesa en escritorio */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve el menú a la derecha */
+}
+
+.nav-list {
+    display: flex; /* Muestra la lista de navegación */
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 2px;
+    transition: background 0.3s ease;
+    box-shadow: 0 1px 5px 1px rgb(9, 78, 46);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.nav-list a:hover {
+    color: white;
+    background: #014040;
+}
+.nav-list a :active{
+    background: orange;
+}
+ion-icon{
+    padding: 4px;
+    }
+/*BUSCADOR DE PRODUCTOS*/
+.search-container {
+    position: fixed;
+    top: 2%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0; /* Espacio arriba y abajo */
+   
+    
+}
+
+.search-input {
+    padding: 10px;
+    width: 350px; /* Ancho del campo de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 50px;
+    
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #02735E;
+    box-shadow: 1px 1px 5px 2px #014040;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color:orange;
+}
+
+/*Menu CATEGORIAS*/
+.menu-categoria {
+    width: 12%;
+    height: auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed; /* Para fijarlo al lado izquierdo */
+    left: 0;
+    top: 97px; /* Ajusta según el espacio que tengas en la parte superior */
+    height: calc(100vh - 100px); /* Altura total menos el espacio del header */
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+    border-right: 1px solid #014040;
+    border-radius: 5px;
+    box-shadow:3px 3px 5px  #014040;
+    color: white;
+}
+h2{
+    color: #014040;
+}
+.category-list {
+    list-style-type: none;
+}
+.nombre-categoria{
+    display: block;
+    background: transparent;
+    padding: 1px;
+    color: black;
+    
+}
+.nombre-categoria:hover{
+    background-color: #014040;
+    border-radius: 5px;
+    color: white;
+}
+.category-list > li {
+    position: relative; /* Para posicionar subcategorías */
+    left: 10%;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+
+
+
+.formulario-ofertar-material {
+    width: 40%; /* Ancho reducido para hacer el formulario más estrecho */
+    margin: 130px auto 0; /* Centrado y margen superior */
+    padding: 15px; /* Espaciado interno reducido */
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.formulario-ofertar-material h2 {
+    text-align: center; /* Centrado del título */
+    color: #02735E; /* Color del título */
+    margin-bottom: 15px; /* Menos espacio debajo del título */
+    font-size: 18px; /* Tamaño de letra reducido */
+}
+
+.formulario-ofertar-material div {
+    margin-bottom: 10px; /* Menos espacio entre campos */
+}
+
+.formulario-ofertar-material label {
+    display: block; /* Cada etiqueta ocupa una línea */
+    margin-bottom: 5px; /* Espacio reducido debajo de las etiquetas */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
+
+.formulario-ofertar-material select,
+.formulario-ofertar-material input {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno reducido */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
+
+.formulario-ofertar-material input::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+.formulario-ofertar-material button {
+    background-color: #02735E; /* Color del botón */
+    color: white; /* Color del texto */
+    padding: 8px 12px; /* Espaciado interno reducido */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    transition: background-color 0.3s; /* Transición suave */
+    width: 100%; /* Ancho completo */
+}
+
+.formulario-ofertar-material button:hover {
+    background-color: orange; /* Color al pasar el mouse */
+}
+
+.checkbox-container {
+    display: flex; /* Usa flexbox para alinear elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 20px;
+    width: 20px; /* Ajusta el ancho */
+    height: 20px; /* Ajusta la altura */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+}
+
+.button-container {
+    display: flex; /* Habilita flexbox */
+    justify-items: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.button-container button {
+    margin: 0 50px; /* Espacio entre los botones */
+}
+
+   
+
+
+
+
+
+
+
+
+/* Estilos para el menú HAMBURGUESA */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Oculta el menú por defecto en móvil */
+        flex-direction: column;
+        width: 50%;
+        background-color: #014040;
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del header */
+        left: 0;
+        z-index: 10;
+    }
+
+    .menu-icon {
+        display: flex; /* Muestra el icono en móvil */
+        position: absolute;
+        right: 5%;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex; /* Muestra el menú cuando está activado */
+    }
+}
+
+
+
+
+/*SECCION DE PIE DE PAGINA*/
+footer {
+    background-color: #02735E;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
