@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(107, 107, 107);
+}
+
+.sin-punto {
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    
+}
+
+.accordion-left {
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+    position: relative; /* Asegúrate de que esté en posición relativa */
+    left: 0; /* Alinea a la izquierda */
+    background-color: rgb(0, 131, 0);
+}
+
+.custom-btn {
+    background: transparent; /* Fondo transparente por defecto */
+    border: none; /* Sin borde */
+    color: #ffffff; /* Color del texto por defecto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.custom-btn:hover {
+background-color: #03a678 !important; /* Cambia el color de fondo al pasar el cursor */
+color: #dfdfdf !important; /* Cambia el color del texto al pasar el cursor */
+}
+.verde{
+    background-color: #02735E !important;
+}
