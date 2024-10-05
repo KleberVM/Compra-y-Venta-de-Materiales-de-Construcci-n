@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -64,6 +65,7 @@ nav {
 .nav-list li {
     display: inline-block;
 }
+
 .nav-list a {
     display: flex;
     color: #fff;
@@ -93,7 +95,6 @@ ion-icon{
     display: flex;
     justify-content: center;
     margin: 15px 0; /* Espacio arriba y abajo */
-    
    
     
 }
@@ -109,7 +110,7 @@ ion-icon{
 }
 
 .search-button {
-    padding: 9px 13px;
+    padding: 10px 15px;
     margin-left: 10px;
     background-color: #02735E;
     box-shadow: 1px 1px 5px 2px #014040;
@@ -124,64 +125,240 @@ ion-icon{
     background-color:orange;
 }
 
+/*Menu CATEGORIAS*/
+.menu-categoria {
+    width: 12%;
+    height: auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed; /* Para fijarlo al lado izquierdo */
+    left: 0;
+    top: 97px; /* Ajusta según el espacio que tengas en la parte superior */
+    height: calc(100vh - 100px); /* Altura total menos el espacio del header */
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+    border-right: 1px solid #014040;
+    border-radius: 5px;
+    box-shadow:3px 3px 5px  #014040;
+    color: white;
+}
+h2{
+    color: #014040;
+}
+.category-list {
+    list-style-type: none;
+}
+.nombre-categoria{
+    display: block;
+    background: transparent;
+    padding: 1px;
+    color: black;
+    
+}
+.nombre-categoria:hover{
+    background-color: #014040;
+    border-radius: 5px;
+    color: white;
+}
+.category-list > li {
+    position: relative; /* Para posicionar subcategorías */
+    left: 10%;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.subcategory-list {
+    display: none; /* Ocultar por defecto */
+    list-style-type: none;
+    padding-left: 20px; /* Indentar las subcategorías */
+    background-color: #02735E;
+}
+.subcategory-list:hover{
+    background: orange;
+    border-radius: 5px;
+}
+
+.category-list > li:hover .subcategory-list {
+    display: block; /* Mostrar subcategorías al pasar el puntero */
+    
+}
 
 
-/*PARA CELULARES*/
-/* Estilos para el menú hamburguesa */
+
+/* Estilos para el menú HAMBURGUESA */
 @media (max-width: 768px) {
     .nav-list {
-        display: none; /* Oculta el menú por defecto */
+        display: none; /* Oculta el menú por defecto en móvil */
         flex-direction: column;
+        width: 50%;
         background-color: #014040;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Ajusta según la altura del header */
         left: 0;
-        width: 100%;
         z-index: 10;
     }
+
     .menu-icon {
         display: flex; /* Muestra el icono en móvil */
         position: absolute;
         right: 5%;
     }
-    #menu-toggle:checked + .menu-icon + nav .nav-list {
-        display: flex; /* Muestra el menú cuando el checkbox está activado */
-        width: 150px;
-        position: absolute;
-        left: 72%;
-        top: 95px;
-        border-radius: 5px;
-    }
 
-    /*menu caterogiria posision en la parte inferior del menu*/
-    .menu-categoria {
-        display: flex;
-        width: 100%;
-        max-height: 60px;
-        position: fixed;
-        z-index:2;
-    }
-    .menu-categoria:hover{
-        max-height: 130px;
-        overflow: hidden; /* Desactiva el scroll */
-    }
-    .nombre-categoria{
-        display: inline-block;
-        justify-content: space-between;
-        position: fixed;
+    #menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex; /* Muestra el menú cuando está activado */
     }
 }
 
-/*BUSCADOR DE PRODUCTOS*/
-.search-container {
-    left: 20%;
+.hero-section {
+    margin-top: 10%;
+    background-color: #f8fcfb;
+    color: #014040;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.search-input {
-    width: 250px; /* Ancho del campo de búsqueda */
+.hero-section h2 {
+    font-size: 2.5rem;
 }
 
-.search-button{
-    width: 65px;
-    height: 40px;
+.hero-section p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+/*SECCION DE PRODUCTOS OFERTADOS*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;/*Para que se mueva el contenedor de productos*/
+    left: 6%;
+    z-index: 1;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+    transition: all 1s;
+}
+.product-card:hover{
+    background:#02735E;
+    box-shadow: 5px 5px 5px #014040;
+}
+.product-card img {
+    width: 95%;
+    height: 200px;
+    padding: 5px;
+    border-radius: 10%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #02735E;
+}
+.product-card h3:hover {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: white;
+}
+.product-card p {
+    padding: 0 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #d9534f; /* Color para el precio */
+}
+
+.product-card button {
+    background-color: #02735E;
+    color: #fff;
+    border: none;
+    padding: 5px 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #025f4b; /* Cambio de color al pasar el mouse */
+  
+   
+}
+ .product-card button:active{
+    background-color: orange;
+ }
+
+ /*SECCION DE NOSOTROS*/
+.about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.about-section h2, .contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*SECCION DE CONTACTOS*/
+.contact-section label {
+    margin: 10px 0 5px;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-section button {
+    background-color: #02735E;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #025f4b;
+}
+/*SECCION DE PIE DE PAGINA*/
+footer {
+    background-color: #02735E;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

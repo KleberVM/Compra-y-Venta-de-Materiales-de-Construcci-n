@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Materiales de Construcción</title>
     <link rel="stylesheet" href="ofertar-material.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -47,10 +48,12 @@
         </ul>
     </aside>
     
+
+    
     <div class="formulario-ofertar-material">
         <h2>Ofertar Material</h2>
-        <form action="procesar_oferta.py" method="post">
-            <div>
+        <form id="ofertaForm" action="procesar_oferta.py" method="post">
+            <div class="form-group">
                 <label for="provincia">Provincia:</label>
                 <select id="provincia" name="provincia" required>
                     <option value="" disabled selected>Seleccionar Provincia</option>
@@ -60,12 +63,12 @@
                     <option value="provincia4">Tiquipaya</option>
                 </select>
             </div>
-            <div>
-                <label for="urlMapa">Direccion:</label>
-                <input type="text" id="urlMapa" name="urlMapa" placeholder="https://www.google.com/maps/..." 
-                required >
+            <div class="form-group">
+                <label for="urlMapa">Dirección:</label>
+                <input type="text" id="urlMapa" name="urlMapa" placeholder="https://www.google.com/maps/..." required>
             </div>
-            <div>
+            
+            <div class="form-group">
                 <label for="material">Tipo de Material:</label>
                 <select id="material" name="material" required>
                     <option value="" disabled selected>Seleccionar Categoría</option>
@@ -75,26 +78,30 @@
                     <option value="fierros">Fierros</option>
                 </select>
             </div>
+    
+            <div class="form-group inline">
+                <div>
+                    <label for="cantidad">(Opcional) Cantidad:</label>
+                    <input type="number"  id="cantidad" name="cantidad" placeholder="Ingresar Cantidad">
+                </div>
+                <div>
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" placeholder="Precio Total (Bs)" required>
+                </div>
+            </div>
+            
             
             <div>
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" placeholder="Ingresar Cantidad" >
-            </div>
-
-            <div>
-                <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" placeholder="Precio Total (Bs)" 
-                required >
-            </div>
-
-
-            <div>
                 <label for="archivo">Subir Archivo(s):</label>
-                <input type="file" id="archivo" name="archivo" required accept=".png, .jpeg">
+                <input type="file" id="archivo" name="archivo" required accept=".png, .jpeg" multiple>
+                
             </div>
-
+            
+            
+            
+    
             <div>
-                <label for="estado">Estado:</label>
+                <label for="estado">(Opcional) Estado:</label>
                 <select id="estado" name="estado">
                     <option value="" disabled selected>Seleccionar Estado</option>
                     <option value="nuevo">Nuevo</option>
@@ -102,24 +109,36 @@
                     <option value="usado">Usado</option>
                     <option value="con_detalles">Con detalles</option>
                 </select>
-                
-            </div>
-            
-            <div class="checkbox-container">
-                <input type="checkbox" id="terminos" name="terminos" checked />
-                <label for="terminos">Acepto las condiciones del servicio y la política de Privacidad</label>
-            </div>
-            <div class="button-container">
-                <button type="submit">Ofertar</button>
-                <button type="button">Cancelar</button> <!-- Botón de cancelar -->
             </div>
 
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Añade una pequeña descripcion..." rows="3" maxlength="250"> 
+                </textarea>
+                
+            </div>
+    
+            <div class="checkbox-container">
+                <input type="checkbox" id="terminos" name="terminos" checked />
+                <label for="terminos">Acepto las <a href="login.html">Condiciones del servicio y la Política de Privacidad</a></label>
+            </div>
+
+
+
+
+            <div class="button-container">
+                <button type="submit">Ofertar</button>
+                <button type="button">Cancelar</button>
+            </div>
         </form>
     </div>
+    
 
 
     
-   
+    
+
+
 
     
 
@@ -132,5 +151,10 @@
             <a href="#">Twitter</a>
         </p>
     </footer>
+
+
+
+
+    <script src="ofertar-material.js"></script>
 </body>
 </html>

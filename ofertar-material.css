@@ -175,9 +175,11 @@ h2{
 
 
 
+
 .formulario-ofertar-material {
-    width: 40%; /* Ancho reducido para hacer el formulario más estrecho */
+    width: 60%; /* Ancho reducido para hacer el formulario más estrecho */
     margin: 130px auto 0; /* Centrado y margen superior */
+    margin-bottom: 35px;
     padding: 15px; /* Espaciado interno reducido */
     background-color: white; /* Fondo blanco */
     border-radius: 5px; /* Bordes redondeados */
@@ -200,7 +202,7 @@ h2{
     margin-bottom: 5px; /* Espacio reducido debajo de las etiquetas */
     font-weight: bold; /* Negrita */
     color: #333; /* Color del texto */
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: 16px; /* Tamaño de fuente reducido */
 }
 
 .formulario-ofertar-material select,
@@ -254,7 +256,27 @@ h2{
     margin: 0 50px; /* Espacio entre los botones */
 }
 
-   
+.formulario-ofertar-material .form-group {
+    margin-bottom: 10px; /* Menos espacio entre campos */
+}
+
+.formulario-ofertar-material .form-group.inline {
+    display: flex; /* Usar flexbox para alinear elementos en línea */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.formulario-ofertar-material .form-group.inline div {
+    flex: 1; /* Hace que los elementos ocupen el mismo ancho */
+}
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    resize: vertical; /* Permitir cambiar el tamaño solo verticalmente */
+}
+
 
 
 

@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <img src="LogoLoginIS.png" alt="Logo de la Tienda" class="header-image">
+        <img src="imagenLogoIS.png" alt="Logo de la Tienda" class="header-image">
         <h1></h1>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
@@ -21,16 +21,14 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </label>
-        
         <nav>
             <ul class="nav-list" id="nav-list">
-                <li><a href="#home">Inicio <ion-icon name="home-outline"></ion-icon></a></li>
-                <li><a href="notificaciones.html">Notificaciones <ion-icon name="notifications-circle-outline"></ion-icon></a></li>
-                <li><a href="carrito.html">Carrito <ion-icon name="cart-outline"></ion-icon></a></li>
-                <li><a href="login.html">Login <ion-icon name="person-circle-outline"></ion-icon></a></li>
-            </ul>
-        </nav>
+                <li><a href="#home">Inicio <ion-icon name="home-outline"></ion-icon> </a></li>
+                <li><a href="#notificaciones">Notificaciones <ion-icon name="notifications-circle-outline"></ion-icon> </a></li>
+                <li><a href="carrito"> Carrito <ion-icon name="cart-outline"></ion-icon></a> </li>
+                <li><a href="ofertar-material.html">Login <ion-icon name="person-circle-outline"></ion-icon> </a></li>
 
+        </nav> 
         <div class="search-container">
             <input type="text" placeholder="Buscar productos..." class="search-input">
             <button class="search-button">Buscar <ion-icon name="search-outline"></ion-icon></button>
@@ -94,7 +92,7 @@
 
         </div>
         <div class="product-card" id="category2">
-            <img src="imagen3IS.jpeg" alt="Ladrillos">
+            <img src="imagen2IS.jpeg" alt="Ladrillos">
             <h3>Ladrillos</h3>
             <button>Mas informacion</button>
             <p>Descripción: Ladrillos resistentes para construcción de muros.</p>
@@ -102,7 +100,7 @@
             <button class="btn">Carrito</button>
         </div>
         <div class="product-card" id="category3">
-            <img src="imagen4IS.jpeg" alt="Arena">
+            <img src="imagen3IS.jpeg" alt="Arena">
             <h3>Arena</h3>
             <button>Mas informacion</button>
             <p>Descripción: Arena de calidad para mezclar con cemento.</p>
@@ -110,7 +108,7 @@
             <button class="btn">Carrito</button>
         </div>
         <div class="product-card" id="category4">
-            <img src="imagen4IS.jpeg" alt="Gravilla">
+            <img src="imagen3IS.jpeg" alt="Gravilla">
             <h3>Gravilla</h3>
             <button>Mas informacion</button>
             <p>Descripción: Gravilla ideal para bases y rellenos.</p>
@@ -118,7 +116,7 @@
             <button class="btn">Carrito</button>
         </div>
         <div class="product-card" id="category4">
-            <img src="imagen4IS.jpeg" alt="Gravilla">
+            <img src="imagen3IS.jpeg" alt="Gravilla">
             <h3>Gravilla</h3>
             <button>Mas informacion</button>
             <p>Descripción: Gravilla ideal para bases y rellenos.</p>
@@ -127,11 +125,33 @@
         </div>
     </section>
 
+    <section id="about" class="about-section">
+        <h2>Sobre Nosotros</h2>
+        <p>En nuestra tienda, nos dedicamos a ofrecer los mejores materiales de construcción para profesionales y particulares. Con más de 20 años de experiencia en el sector, garantizamos calidad y un excelente servicio al cliente.</p>
+        <p>Nos esforzamos por proporcionar los materiales que necesitas para tus proyectos, desde pequeñas renovaciones hasta grandes obras de construcción.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2024 Tienda de Materiales de Construcción. Todos los derechos reservados.</p>
         <p>Síguenos en nuestras redes sociales:</p>
         <p>
-            <a href="#">Facebook</a> | 
+            <a href="">Facebook</a> | 
             <a href="#">Instagram</a> | 
             <a href="#">Twitter</a>
         </p>
