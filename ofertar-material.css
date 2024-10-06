@@ -205,7 +205,7 @@ ion-icon{
 }
 
 .button-container button {
-    margin: 0 50px; /* Espacio entre los botones */
+    margin: 30 50px; /* Espacio entre los botones */
 }
 
 .formulario-ofertar-material .form-group {
