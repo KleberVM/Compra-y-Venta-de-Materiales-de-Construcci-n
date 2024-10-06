@@ -128,6 +128,8 @@ ion-icon{
 
 
 
+
+
 .formulario-ofertar-material {
     width: 60%; /* Ancho reducido para hacer el formulario más estrecho */
     margin: 130px auto 0; /* Centrado y margen superior */
@@ -156,6 +158,12 @@ ion-icon{
     color: #333; /* Color del texto */
     font-size: 16px; /* Tamaño de fuente reducido */
 }
+
+
+
+
+
+
 
 .formulario-ofertar-material select,
 .formulario-ofertar-material input {
@@ -281,6 +289,15 @@ textarea {
         justify-content: space-between;
         position: fixed;
     }
+    .formulario-ofertar-material {
+        width: 150% ; /* Ancho reducido para hacer el formulario más estrecho */
+        
+    }
+    footer {
+        margin-top: auto; 
+        width: 150%; /* Ancho reducido para hacer el  más estrecho */
+        
+    }
 }
 
 
@@ -319,6 +336,3 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
