@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +5,11 @@
 }
 
 body {
-    display: flex;
-    
-    flex-direction: column;
-    min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos la altura de la viewport */
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    
 }
-
 
 header {
     position: fixed;
@@ -71,7 +64,6 @@ nav {
 .nav-list li {
     display: inline-block;
 }
-
 .nav-list a {
     display: flex;
     color: #fff;
@@ -101,6 +93,7 @@ ion-icon{
     display: flex;
     justify-content: center;
     margin: 15px 0; /* Espacio arriba y abajo */
+    
    
     
 }
@@ -116,7 +109,7 @@ ion-icon{
 }
 
 .search-button {
-    padding: 10px 15px;
+    padding: 9px 13px;
     margin-left: 10px;
     background-color: #02735E;
     box-shadow: 1px 1px 5px 2px #014040;
@@ -129,47 +122,6 @@ ion-icon{
 
 .search-button:hover {
     background-color:orange;
-}
-
-/*Menu CATEGORIAS*/
-.menu-categoria {
-    width: 12%;
-    height: auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    position: fixed; /* Para fijarlo al lado izquierdo */
-    left: 0;
-    top: 97px; /* Ajusta según el espacio que tengas en la parte superior */
-    height: calc(100vh - 100px); /* Altura total menos el espacio del header */
-    overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
-    border-right: 1px solid #014040;
-    border-radius: 5px;
-    box-shadow:3px 3px 5px  #014040;
-    color: white;
-}
-h2{
-    color: #014040;
-}
-.category-list {
-    list-style-type: none;
-}
-.nombre-categoria{
-    display: block;
-    background: transparent;
-    padding: 1px;
-    color: black;
-    
-}
-.nombre-categoria:hover{
-    background-color: #014040;
-    border-radius: 5px;
-    color: white;
-}
-.category-list > li {
-    position: relative; /* Para posicionar subcategorías */
-    left: 10%;
-    padding: 5px 0;
-    cursor: pointer;
 }
 
 
@@ -285,30 +237,67 @@ textarea {
 
 
 
-/* Estilos para el menú HAMBURGUESA */
+/*PARA CELULARES*/
+/* Estilos para el menú hamburguesa */
 @media (max-width: 768px) {
     .nav-list {
-        display: none; /* Oculta el menú por defecto en móvil */
+        display: none; /* Oculta el menú por defecto */
         flex-direction: column;
-        width: 50%;
         background-color: #014040;
         position: absolute;
-        top: 60px; /* Ajusta según la altura del header */
+        top: 60px;
         left: 0;
+        width: 100%;
         z-index: 10;
     }
-
     .menu-icon {
         display: flex; /* Muestra el icono en móvil */
         position: absolute;
         right: 5%;
     }
+    #menu-toggle:checked + .menu-icon + nav .nav-list {
+        display: flex; /* Muestra el menú cuando el checkbox está activado */
+        width: 150px;
+        position: absolute;
+        left: 72%;
+        top: 95px;
+        border-radius: 5px;
+    }
 
-    #menu-toggle:checked + .menu-icon + .nav-list {
-        display: flex; /* Muestra el menú cuando está activado */
+    /*menu caterogiria posision en la parte inferior del menu*/
+    .menu-categoria {
+        display: flex;
+        width: 100%;
+        max-height: 60px;
+        position: fixed;
+        z-index:2;
+    }
+    .menu-categoria:hover{
+        max-height: 130px;
+        overflow: hidden; /* Desactiva el scroll */
+    }
+    .nombre-categoria{
+        display: inline-block;
+        justify-content: space-between;
+        position: fixed;
     }
 }
 
+
+
+/*BUSCADOR DE PRODUCTOS*/
+.search-container {
+    left: 20%;
+}
+
+.search-input {
+    width: 250px; /* Ancho del campo de búsqueda */
+}
+
+.search-button{
+    width: 65px;
+    height: 40px;
+}
 
 
 
