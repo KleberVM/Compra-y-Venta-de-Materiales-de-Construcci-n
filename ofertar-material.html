@@ -44,16 +44,27 @@
     <div class="formulario-ofertar-material">
         <h2>Ofertar Material</h2>
         <form id="ofertaForm" action="procesar_oferta.py" method="post">
-            <div class="form-group">
+            <div class="form-group inline">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" required>
+                    <option value="" disabled selected>Seleccionar Departamento</option>
+                    <option value="La Paz" data-provincias='["Murillo", "Los Andes", "Franz Tamayo", "Omasuyas", "Manco Kapac", "Muñecas", "Larecaja", "Caranavi", "Nor Yungas", "Sud Yungas", "Gualberto Villarroel"]'>La Paz</option>
+                    <option value="Cochabamba" data-provincias='["Cercado", "Chapare", "Quillacollo", "Esteban Arce", "Capinota", "Ayopaya", "Mizque", "Arque", "Carrasco", "Punata"]'>Cochabamba</option>
+                    <option value="Santa Cruz" data-provincias='["Andrés Ibáñez", "Chiquitos", "Guarayos", "Ñuflo de Chávez", "Velasco", "Ángel Sandoval", "Germán Busch"]'>Santa Cruz</option>
+                    <option value="Tarija" data-provincias='["Cercado", "Gran Chaco", "Aniceto Arce", "Eustaquio Méndez", "José María Avilés"]'>Tarija</option>
+                    <option value="Oruro" data-provincias='["Oruro", "Carangas", "Ladislao Cabrera", "Tomas Barrón", "Sebastián Pagador"]'>Oruro</option>
+                    <option value="Potosi" data-provincias='["Tomás Frías", "Nor Lípez", "Sud Lípez", "Daniel Campos", "Antonio Quijarro", "Potosí", "Chayanta", "Rada", "Alonso de Ibáñez"]'>Potosí</option>
+                    <option value="Pando" data-provincias='["Federico Román", "Madre de Dios", "Nicolás Suárez"]'>Pando</option>
+                    <option value="Beni" data-provincias='["Cercado", "Vaca Diez", "Marbán", "Moxos", "Yacuma", "Mamoré", "Gutiérrez"]'>Beni</option>
+                    <option value="Chuquisaca" data-provincias='["Sucre", "Yamparáez", "Azurduy", "Zudáñez", "Cinti", "Hernando Siles", "Luis Calvo"]'>Chuquisaca</option>
+                </select>
+                
                 <label for="provincia">Provincia:</label>
                 <select id="provincia" name="provincia" required>
                     <option value="" disabled selected>Seleccionar Provincia</option>
-                    <option value="provincia1">Quillacollo</option>
-                    <option value="provincia2">Cochabamba</option>
-                    <option value="provincia3">Colcapirhua</option>
-                    <option value="provincia4">Tiquipaya</option>
                 </select>
             </div>
+            
             <div class="form-group">
                 <label for="urlMapa">Dirección:</label>
                 <input type="text" id="urlMapa" name="urlMapa" placeholder="https://www.google.com/maps/..." required>
@@ -63,18 +74,19 @@
                 <label for="material">Tipo de Material:</label>
                 <select id="material" name="material" required>
                     <option value="" disabled selected>Seleccionar Categoría</option>
-                    <option value="cementos">Cementos</option>
-                    <option value="maderas">Maderas</option>
-                    <option value="ladrillos">Ladrillos</option>
-                    <option value="fierros">Fierros</option>
+                    <option value="cementos">Acero</option>
+                    <option value="maderas">Tejas y cubiertas</option>
+                    <option value="ladrillos">Cemento y complemento</option>
+                    <option value="fierros">Ladrillos y bloques</option>
+                    <option value="fierros">Arena</option>
+
+
+
                 </select>
             </div>
     
             <div class="form-group inline">
-                <div>
-                    <label for="cantidad">(Opcional) Cantidad:</label>
-                    <input type="number"  id="cantidad" name="cantidad" placeholder="Ingresar Cantidad">
-                </div>
+                
                 <div>
                     <label for="precio">Precio:</label>
                     <input type="number" id="precio" name="precio" placeholder="Precio Total (Bs)" required>

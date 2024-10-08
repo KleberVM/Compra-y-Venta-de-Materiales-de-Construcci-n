@@ -91,6 +91,9 @@ const validarFormulario = (event) => {
     // Aquí puedes añadir otras validaciones del formulario si es necesario
 };
 
+
+
+
 // Módulo de inicialización de eventos
 const inicializarEventos = () => {
     // Asociar la validación de archivos al cambio del input de archivos
@@ -98,12 +101,25 @@ const inicializarEventos = () => {
 
     // Asociar la validación completa del formulario al submit
     document.getElementById('ofertaForm').addEventListener('submit', validarFormulario);
+
+    // Asociar el cambio del departamento para actualizar las provincias
+    document.getElementById('departamento').addEventListener('change', function() {
+        const provinciaSelect = document.getElementById('provincia');
+        provinciaSelect.innerHTML = '<option value="" disabled selected>Seleccionar Provincia</option>';
+
+        const provincias = JSON.parse(this.options[this.selectedIndex].getAttribute('data-provincias'));
+
+        provincias.forEach(function(provincia) {
+            const option = document.createElement('option');
+            option.value = provincia;
+            option.textContent = provincia;
+            provinciaSelect.appendChild(option);
+        });
+    });
 };
 
 // Inicializar eventos cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', inicializarEventos);
-
-
 
 
 
