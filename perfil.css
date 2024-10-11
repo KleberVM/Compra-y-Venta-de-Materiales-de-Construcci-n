@@ -193,6 +193,7 @@ ion-icon{
     border-radius: 50%;
     display: block;
     margin: 0 auto 20px auto;
+    object-fit: cover;
 }
 .datos-edicion {
     display: flex; /* Convierte el artículo en un contenedor flex */
@@ -204,13 +205,17 @@ ion-icon{
    
     
 }
-
+/*
 .datos-edicion section {
     margin-bottom: 20px;
     
     min-width: 300px
    
 }
+    */
+
+
+
 
 /* Estilo de los botones y etiquetas */
 .boton-foto button{
@@ -222,7 +227,11 @@ ion-icon{
     border-radius: 10px;
     font-size: 20px;
 }
-
+/*agregado*/
+#input-foto {
+    display: none; /* Mantiene oculto el input */
+}
+/*agregado*/
 button:hover {
     background-color: #F27405;
 }
@@ -236,40 +245,300 @@ span {
     margin-right: 10px;
 }
 /*lo ulatimo*/
-.datos-edicion {
-    display: flex; /* Convierte el artículo en un contenedor flex */
-    margin-top: 6.25rem;
-    
-}
 
 .imagen-de-perfil {
     width: 40%; /* Ajusta el ancho según tus necesidades */
-    margin-right: 1.25rem; /* Espacio entre la imagen y los datos */    
+    padding-right: 2.30rem; /* Espacio entre la imagen y los datos */ 
+    margin-right: 2.30rem;
+    height:auto;
+    padding-top: 2.5rem;
+    overflow: hidden;
+    position:relative
 }
-
+/*asig*/
+.edicion-foto{
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#foto-principal-perfil{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*asig*/
 .edicion-foto img {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+   
+    margin-bottom: 10px; /* Espacio entre la imagen y el botón */
 }
 .boton-foto {
-    display: flex; /* Para centrar el botón, si es necesario */
+    display: block; /* Para centrar el botón, si es necesario */
     align-items: center; /* Centra verticalmente */
 }
-.edicion-foto{
-    max-width: 100%; /* Asegura que el contenedor de la imagen no exceda el ancho de su sección */
-    overflow: hidden;
-}
+
 .perfil-datos {
     width: 55%; /* Ajusta el ancho según tus necesidades */
-    margin-top: 100px;
+    margin-top: 20px;
+    
    
 }
+/*ventana emergente*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    
+    background-color: #02735E;
+    margin: 15% auto; /* Espacio superior e inferior */
+    padding: 40px;
+    border: 1px solid #888;
+    width: 50%; /* Ancho del modal */
+}
+.boton-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#guardar-nombre {
+    margin-left: auto;  /* Centra el botón horizontalmente */
+    margin-right: auto; /* Asegura que haya un margen a la derecha */
+    display: block; /* Para que el botón se comporte como un bloque */
+    width: fit-content; /* Ajusta el ancho del botón al contenido */
+    padding: 10px 20px; /* Padding para que se vea más grande */
+    background-color: #F27405; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.cerrar {
+    background-color: #FF0000;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*input*/
+.clase-guardar-nombre {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Apila el input y el botón verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px; /* Espacio interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+#ventana-nombre {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    max-width: 400px; /* Ancho máximo */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 10px; /* Espacio entre el input y el botón */
+    border: 2px solid #00A77C; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+/*fin ventana*/
+
+/* Modal de Número de Celular */
+.modal-celular {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.modal-content-celular {
+    background-color: #02735E; /* Color de fondo */
+    margin: 15% auto; /* Espacio superior e inferior */
+    padding: 40px; /* Espacio interno */
+    border: 1px solid #888; /* Borde */
+    width: 50%; /* Ancho del modal */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.boton-container-celular {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#guardar-celular {
+    margin-left: auto;  /* Centra el botón horizontalmente */
+    margin-right: auto; /* Asegura que haya un margen a la derecha */
+    display: block; /* Para que el botón se comporte como un bloque */
+    width: fit-content; /* Ajusta el ancho del botón al contenido */
+    padding: 10px 20px; /* Padding para que se vea más grande */
+    background-color: #F27405; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.cerrar-celular {
+    background-color: #FF0000;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-celular:hover,
+.cerrar-celular:focus {
+    color: white;
+    text-decoration: none;
+}
+
+/* Input para el modal de celular */
+#ventana-celular {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    max-width: 400px; /* Ancho máximo */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 10px; /* Espacio entre el input y el botón */
+    border: 2px solid #00A77C; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Contenedor para el input y el botón */
+.clase-guardar-celular {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Apila el input y el botón verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px; /* Espacio interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+
+
+/*fin ventana celular*/
+
+
+/* Modal para el correo */
+.modal-correo {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.modal-content-correo {
+    background-color: #02735E; /* Color de fondo */
+    margin: 15% auto; /* Espacio superior e inferior */
+    padding: 40px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde */
+    width: 50%; /* Ancho del modal */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor para centrar botones */
+.boton-container-correo {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para el botón guardar del correo */
+#guardar-correo {
+    margin-left: auto;  /* Centra el botón horizontalmente */
+    margin-right: auto; /* Asegura que haya un margen a la derecha */
+    display: block; /* Para que el botón se comporte como un bloque */
+    width: fit-content; /* Ajusta el ancho del botón al contenido */
+    padding: 10px 20px; /* Padding para que se vea más grande */
+    background-color: #F27405; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilo para el botón cerrar */
+.cerrar-correo {
+    background-color: #FF0000;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.cerrar-correo:hover, .cerrar-correo:focus {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para el input del correo */
+#ventana-correo {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    max-width: 400px; /* Ancho máximo */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 10px; /* Espacio entre el input y el botón */
+    border: 2px solid #00A77C; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Contenedor flex para alinear el input y el botón */
+.clase-guardar-correo {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Apila el input y el botón verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px; /* Espacio interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+/*ventana correo*/
+
 .form-nombre, .form-celular, .form-correo {
     display: flex;
     
     align-items: center;
     
 }
+
+/* Estilos específicos para los campos de texto y correo electrónico dentro del perfil */
+.datos-edicion input[type="text"],
+.datos-edicion input[type="email"] {
+    width: 70%; /* Mismo tamaño que el span */
+    padding: 5px;
+    border: 2px solid #00A77C; /* Añade un borde al input */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
 .label-y-span {
     display:flex;
     flex-direction: column; /* Coloca el label y el span en columna */
@@ -308,12 +577,7 @@ span {
     
 }
 
-.edicion-foto img {
-    width: 400px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block;
-    margin-bottom: 10px; /* Espacio entre la imagen y el botón */
-}
+
 
 
 .boton-foto button  {
@@ -324,7 +588,8 @@ span {
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     margin-top: 10px;
-    margin-left: 180px;
+    margin-left: 160px;
+    align-items: center
     
 }
 
@@ -354,7 +619,7 @@ footer a:hover {
     text-decoration: underline;
 }
 /* --- Responsive --- */
-@media (max-width: 768px) {
+@media (max-width: 1231px) {
     .nav-list {
         display: none;
         flex-direction: column;
@@ -445,8 +710,42 @@ footer a:hover {
         position: relative; /* Para que no se superponga con el contenido */
 
     }
+   /* Media Queries para Responsividad */
+   .modal-content {
+    padding: 40px; /* Padding normal para pantallas más grandes */
+}
 
-    
-    
+    .cerrar {
+    font-size: 28px; /* Tamaño normal para pantallas más grandes */
+}
+.modal {
+    padding: 10px; /* Reduce el padding del modal */
+}
+#guardar-nombre {
+    font-size: 28px
+}
+
+.modal-content {
+    width: 95%; /* Ajusta el ancho para pantallas pequeñas */
+}
+#guardar-nombre {
+    width: 100%; /* Hace que el botón ocupe el 100% del ancho en pantallas pequeñas */
+    padding: 12px; /* Ajusta el padding */
+    height: 100%;
+}
+/*input*/
+.clase-guardar-nombre {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+}
+
+#ventana-nombre {
+    max-width: 100%; /* Permite que el input ocupe todo el ancho en pantallas pequeñas */
+}
+
+#guardar-nombre {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+}
+
+
     
 }

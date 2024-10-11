@@ -32,11 +32,13 @@
     <article class="datos-edicion">
         <section id="imagen-perfil" class="imagen-de-perfil">
             <div class="edicion-foto" id="foto-perfil">
-                <img src="imagenPerfil.png" class="imagen-article">
+                <img src="imagenPerfil.png" class="imagen-article" id="foto-principal-perfil">
             </div>
             <div class="boton-foto" id="boton-para-foto">
                 <button>Editar</button>
+              
             </div>
+            <input type="file" id ="input-foto" accept="image/*"><!--agregado-->
         </section>
         <section id="datos-perfil" class="perfil-datos">
             <div class="form-nombre">
@@ -44,27 +46,59 @@
                     <label for="nombre-completo">Nombre Completo:</label>
                     <span id="nombreCompleto">Juan Pérez</span>
                 </div>
-                <button>Editar</button>
+                <button id="editar-nombre">Editar</button>
+                <!-- Modal de Nombre -->
+                <div id="miModal" class="modal modal-nombre">
+                    <div class="modal-content modal-content-nombre">
+                        <span class="cerrar">&times;</span> <!-- Botón de cierre para el modal de nombre -->
+                        <div class="clase-guardar-nombre">
+                            <input type="text" id="ventana-nombre" placeholder="Ingrese nuevo nombre">
+                            <button id="guardar-nombre">Guardar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-celular">
                 <div class="label-y-span">
                     <label for="numero-celular">Número de Celular:</label>
                     <span id="numeroCelular">65762428</span>
                 </div>   
-                <button>Editar</button>
+                <button id="editar-celular">Editar</button>
+                <!-- Modal de Número de Celular -->
+                <div id="mi-celular" class="modal modal-celular">
+                    <div class="modal-content modal-content-celular">
+                        <span class="cerrar-celular">&times;</span> <!-- Botón de cierre para el modal de número -->
+                        <div class="clase-guardar-celular">
+                            <input type="text" id="ventana-celular" placeholder="Ingrese nuevo celular">
+                            <button id="guardar-celular">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="form-correo">
                 <div class="label-y-span">
                     <label for="correoElectronico">Correo Electrónico:</label>
                     <span id="correoElectronico">juanperez@gmail.com</span>
                 </div>
-                <button>Editar</button>
+                <button id="editar-correo">Editar</button>
+            
+                <!-- Estructura del modal para editar el correo -->
+                <div id="mi-correo" class="modal">
+                    <div class="modal-content">
+                        <span class="cerrar-correo">&times;</span> <!-- Botón para cerrar el modal -->
+                        <div class="clase-guardar-correo">
+                            <input type="email" id="ventana-correo" placeholder="Ingrese nuevo correo">
+                            <button id="guardar-correo">Guardar</button>
+                        </div>     
+                    </div>
+                </div>
             </div>
         </section>
     </article>
     
     <aside class="menu-perfil">
-        <img src="imagenPerfil.png">
+        <img src="imagenPerfil.png" id="foto-barra-lateral">
         <ul class="lista-perfil">
             <li><a href="Perfil.html">Perfil</a></li>
             <li><a href="Ofertar-material">Ofertar material</a></li>
@@ -80,5 +114,7 @@
             <a href="#">Twitter</a>
         </p>
     </footer>
+     <script src="perfil.js"></script>
+   
 </body>
 </html>
